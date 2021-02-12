@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h1 id="teste">SEU NOME ABAIXO</h1>
+
+    <script>
+        var nome = window.prompt("Qual o seu nome?")
+        document.write(`Ola <strong> ${nome}</strong>. <br>`);
+        document.write(`Seu nome tem ${nome.length} Letras.<br>`);
+        document.write(`O seu nome em letras maiusculas e <strong>${nome.toUpperCase()}</strong> <br>`)
+        document.write(`O seu nome em letras minusculas e <strong>${nome.toLocaleLowerCase()}</strong>`);
+        // Exemplo 1
+        document.getElementById('teste').style.color="blue"; // seleciona o ID e adiciona stilo ao id selecionado
+        // Exemplo 2
+        var t = document.getElementById('teste'); // cria variavel t e atribui o id teste
+        t.style.backgroundColor="yellow"; // adiciona estilo a variavel t 
+    </script>
+</body>
+</html>

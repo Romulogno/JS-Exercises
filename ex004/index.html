@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESTE DE NASCIONALIDADE</title>
+</head>
+<body>
+    <h1>TESTE DE NACIONALIDADE</h1>
+    <p>Digite o pais que voce nasceu</p>
+
+    <input type="text" id="text">
+    <input type="button" value="Checar" onclick="checar()">
+    <div id="res"></div>
+
+    <script>
+        
+        function checar(){
+            var txt = document.getElementById('text')
+            var res = document.getElementById('res')
+            var texto = String(txt.value)
+            res.innerHTML = `<p> Sua pais e ${texto}</p>`
+            if (texto == "Brasil"){
+                res.innerHTML += ` e por isso voce e brasileiro`
+            }
+            else {
+                res.innerHTML += ` e por isso voce e estrangeiro`
+            }
+
+
+
+
+        }
+        
+
+
+    </script>
+
+
+</body>
+</html>

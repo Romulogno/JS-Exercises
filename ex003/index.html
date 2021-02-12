@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1>SOMA DE NUMEROS</h1>
+
+<input type="number" name="n1" id="n1">
+<input type="number" name="n2" id="n2">
+<input type="button" value="Somar" onclick="somar()"> <!-- Botao com parametro onclick que vai chamar a funcao "somar"-->
+<div id="res">RESULTADO</div>
+
+<script>
+
+    function somar(){  // funcao com nome "somar" que sera chamada quando onclick for ativado
+        var a = window.document.getElementById('n1');  // pega o valor do elemento com id n1
+        var b = window.document.getElementById('n2');  // pega o valor do elemento com id n2
+        var res = window.document.getElementById('res'); // pega o valor do elemento com id res 
+        
+        var number1 = Number(a.value); // variavel number1 recebe valor de a e converte para numerico
+        var number2 = Number(b.value); // variavel number2 recebe o valor de b e converte para numerico
+        var soma = number1 + number2;  // variavel soma recebe a soma das variaveis number1 e number2 
+        res.innerHTML = soma;          // altera o conteudo da div res para o conteudo da variavel soma 
+    }
+
+</script>
+
+</body>
+</html>

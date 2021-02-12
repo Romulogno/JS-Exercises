@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            display: flex;
+            
+        }
+
+        .cal{
+            margin: 100px auto;
+            border: 2px solid #d8d7d7;
+            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.315);
+            display: flex;
+            flex-wrap: wrap;
+            width: 300px;
+            flex-direction: row-reverse;
+            border-radius: 5px;
+        }
+
+        .square {
+            font-size: 15pt;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 10px 20px;
+            margin: 10px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.034);
+            background-color: white;
+            color: rgba(0, 0, 0, 0.603);
+            border: 1px solid #e7e7e7;
+            border-radius: 2px;
+        }
+
+        .display{
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.034);
+            border: 1px solid rgba(0, 0, 0, 0.11);
+            width: 100%;
+            padding: 10px 20px;
+            margin: 10px;
+            font-family: monospace;
+            font-size: 18pt;
+            text-align: right;
+        }
+
+        .square:hover {
+            background-color: #e7e7e7;
+            }
+
+        .square:active {
+            background-color:#cfcece;;
+            transform: translateY(2px);
+        }
+    </style>
+
+</head>
+<body>
+    
+<div class="container">
+    <div class="cal">
+        <div class="display" id="tela">0</div>
+        
+            <div class="square" onclick="calc()">+</div>
+            <!-- /.square -->
+            <div class="square" >9</div>
+            <!-- /.square -->
+            <div class="square" >8</div>
+            <!-- /.square -->
+            <div class="square">7</div>
+            <!-- /.square -->
+      
+            <div class="square">-</div>
+            <!-- /.square -->
+            <div class="square">6</div>
+            <!-- /.square -->
+            <div class="square">5</div>
+            <!-- /.square -->
+            <div class="square">4</div>
+            <!-- /.square -->
+       
+            <div class="square">X</div>
+            <!-- /.square -->
+            <div class="square">3</div>
+            <!-- /.square -->
+            <div class="square">2</div>
+            <!-- /.square -->
+            <div class="square">1</div>
+            <!-- /.square -->
+       
+            <div class="square">/</div>
+            <!-- /.square -->
+            <div class="square">=</div>
+            <!-- /.square -->
+            <div class="square">0</div>
+            <!-- /.square -->
+            <div class="square">C</div>
+    </div>
+</div>
+
+<script>
+    
+    function calc(){
+    var display = document.getElementById('tela')   
+
+
+    display.innerHTML = "aleluia"
+
+    }
+    
+
+
+</script>
+
+</body>
+</html>
