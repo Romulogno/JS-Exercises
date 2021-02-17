@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+
+    <style>
+        body{
+            
+            background-color: rgb(144, 212, 221);
+        }
+
+        section{
+            width:450px ;
+            border: 1px solid black;
+            border-radius: 5px;
+            background-color: rgba(255, 250, 240, 0.623);
+            height: 350px;
+            margin: auto;
+        }
+
+    div#data{
+        margin: 10px;
+        padding: 20px;
+    }
+
+
+    div#data {
+    
+    }
+
+    div#res{
+        margin: 20px;
+
+}
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <h1 style="text-align: center;">Contador</h1>
+    </header>
+
+    <section>
+        <div id="data"> 
+           
+            Inicio:  <input type="text" name="inicio" id="txtini">
+            
+            <p>Fim: <input type="number" name="fim" id="txtfim"></p>
+           
+            <p>Passo: <input type="number" name="passo" id="txtpasso"></p>
+
+            <input id="con" type="button" value="Contar" onclick="contar()">
+        </div>
+
+        <div id="res">
+            Contando: 
+        </div>
+
+    </section>
+    
+
+    <footer style="text-align: center;">
+        <p>&copy Curso em Video</p>
+    </footer>
+
+    <script src="contador.js"> </script>
+    
+</body>
+</html>
