@@ -1,0 +1,7 @@
+function fatorial(n){
+    for(c=n;c<=n ; c--){
+        console.log = (c*n)
+    }
+}
+var res = fatorial(5)
+//console.log(res)

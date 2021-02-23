@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+
+    <style>
+        body{
+            
+            background-color: rgb(144, 212, 221);
+        }
+
+        section{
+            
+            border: 1px solid black;
+            border-radius: 5px;
+            background-color: rgba(255, 250, 240, 0.623);
+            width:550px ;       
+            margin: auto;
+        }
+
+        div{
+            margin: 30px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <h1 style="text-align: center;">Analizador de Numeros</h1>
+    </header>
+
+    <section>
+        <div id="valores"> <p>Numero de 1 a 100  <input type="number" name="txtnum" id="txtnum">  <input type="button" value="adicionar" onclick="add()"></p> 
+        </div>
+        <div> 
+          <select name="lista" id="lista" size='11'>
+              <option value="#">Adicione Numeros</option>
+          </select> 
+        </div>
+        <input type="button" value="Validar" onclick="validar()">
+        <div id="res"> </div>
+
+    </section>
+    
+
+    <footer style="text-align: center;">
+        <p>&copy Curso em Video</p>
+    </footer>
+
+    <script src="script.js"> </script>
+    
+</body>
+</html>
