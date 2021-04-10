@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+ 
+    <h1 style="color: coral;">Conversor de moedas</h1>
+    <p>R$: 
+         <input type="number" name="txtnum" id="txtnum">
+         <input type="button" value="Converter" onclick="convert()">
+    </p>
+
+
+    <p id="resEUR"></p>
+    <p id="resUSD"></p>
+    <p id="resCAD"></p>
+
+
+    <script>
+        
+
+        function convert() {
+        resEUR = document.getElementById('resEUR');
+        resUSD = document.getElementById('resUSD');
+        resCAD = document.getElementById('resCAD');
+
+        var num = document.getElementById('txtnum');
+        EUR = num.value * 6.65
+        USD = num.value * 5.51
+        CAD = num.value * 4.40
+
+        resEUR.innerHTML = ('Valor em EURO: ' + EUR.toLocaleString('en-ie', {style: 'currency', currency: 'EUR'})) ;
+        resUSD.innerHTML = ('Valor em USD: ' + USD.toLocaleString('en-us', {style: 'currency', currency: 'USD'}));
+        resCAD.innerHTML = ('Valor em CAD: ' + CAD.toLocaleString('en-ca', {style: 'currency', currency: 'CAD'}));
+        }
+
+    </script>
+
+</body>
+</html>

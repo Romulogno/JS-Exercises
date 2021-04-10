@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universo</title>
+
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <h1> Calculadora de Anos luz</h1>
+
+    <div id="up"> <input type="text" name="" id="input"> </div>
+    <div id="espaco">
+        <img src="imagens/astronauta.png" alt="">
+
+        </div>
+    <div id="down"><input type="text" id="output"></div>
+    <div id="botao" ><input  type="button" value="Calculate" onclick="calcular()" ></div>
+
+
+
+   
+    <script>
+        
+        function calcular() {
+            var anosLuz = document.getElementById('input').value;
+            
+            
+            var kmLuz = anosLuz * 9460800000000;
+            var res = document.getElementById('output').value = (anosLuz + "  Anos Luz equivalem a  " + kmLuz + 'Km');
+
+          
+        
+            
+        }
+
+
+    </script>
+
+
+    
+</body>
+</html>
