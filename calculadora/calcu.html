@@ -80,7 +80,7 @@
             <div class="square" onclick="armazenar(this.innerHTML)">7</div>
             <!-- /.square -->
       
-            <div class="square">-</div>
+            <div class="square" onclick="subtrair()">-</div>
             <!-- /.square -->
             <div class="square" onclick="armazenar(this.innerHTML)">6</div>
             <!-- /.square -->
@@ -100,7 +100,7 @@
        
             <div class="square">/</div>
             <!-- /.square -->
-            <div class="square">=</div>
+            <div class="square" onclick="resultado()">=</div>
             <!-- /.square -->
             <div class="square" onclick="armazenar(this.innerHTML)">0</div>
             <!-- /.square -->
@@ -123,13 +123,15 @@
     var numeros = new Array;
     count = 0
     var sum = ''
-    var soma1 = 0
-    var soma2 = 0
-    var soma3 = 0
+    var soma1 = ''
+    var soma2 = ''
+    var soma3 = ''
+    var plus = '+'
+    var minus = '-'
+    var operador = ''
 
     //Armazena os numeros no array
     function armazenar(valor){
-        var num = valor
         numeros.push(valor)
         console.log(numeros)
         var display = document.getElementById('tela')
@@ -138,13 +140,40 @@
         count++
         console.log(sum)
     }
-    // realiza a soma dos numeros (em contrucao)
+    // armazena o primeiro valor na variavel e adiciona a operacao a ser feita (em contrucao)
     function somar(){
-        soma1 = sum
-        limpar()
-        console.log(soma1)
-        console.log(numeros)
+        soma1 = sum;
+        operador = plus
+        console.log(soma1);
+        console.log('operador ' + operador);
+        limpar();
     }
+
+    function subtrair(){
+        soma1 = sum;
+        operador = minus
+        console.log(soma1);
+        console.log('operador ' + operador);
+        limpar();
+    }
+
+
+
+    function resultado(){
+        res = 0
+        soma2 = sum;
+        soma1num = Number(soma1)    
+        soma2num = Number(soma2)
+        if (operador == '+') {
+            res = soma1num + soma2num
+        } if (operador == '-'){
+            res = soma1num - soma2num
+        }
+        document.getElementById('tela').innerHTML = res
+        
+    }
+
+
 
     // limpa o array de numeros e o campo de display
     function limpar(){
