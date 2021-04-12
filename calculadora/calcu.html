@@ -89,7 +89,7 @@
             <div class="square" onclick="armazenar(this.innerHTML)">4</div>
             <!-- /.square -->
        
-            <div class="square">X</div>
+            <div class="square" onclick="multiplicar()">X</div>
             <!-- /.square -->
             <div class="square" onclick="armazenar(this.innerHTML)">3</div>
             <!-- /.square -->
@@ -98,7 +98,7 @@
             <div class="square" onclick="armazenar(this.innerHTML)">1</div>
             <!-- /.square -->
        
-            <div class="square">/</div>
+            <div class="square" onclick="dividir()">/</div>
             <!-- /.square -->
             <div class="square" onclick="resultado()">=</div>
             <!-- /.square -->
@@ -125,17 +125,19 @@
     var sum = ''
     var soma1 = ''
     var soma2 = ''
-    var soma3 = ''
     var plus = '+'
     var minus = '-'
+    var times = '*'
+    var split = '/'
     var operador = ''
 
     //Armazena os numeros no array
     function armazenar(valor){
-        numeros.push(valor)
-        console.log(numeros)
         var display = document.getElementById('tela')
+        numeros.push(valor)
+        console.log(numeros)        
         display.innerHTML += numeros[count]
+        
         sum = sum + numeros[count]
         count++
         console.log(sum)
@@ -157,6 +159,21 @@
         limpar();
     }
 
+    function multiplicar(){
+        soma1 = sum;
+        operador = times
+        console.log(soma1);
+        console.log('operador ' + operador);
+        limpar();
+    }
+
+    function dividir(){
+        soma1 = sum;
+        operador = split
+        console.log(soma1);
+        console.log('operador ' + operador);
+        limpar();
+    }
 
 
     function resultado(){
@@ -168,12 +185,18 @@
             res = soma1num + soma2num
         } if (operador == '-'){
             res = soma1num - soma2num
+        } if (operador == '*'){
+            res = soma1num * soma2num
+        } if (operador == '/'){
+            res = soma1num / soma2num
         }
         document.getElementById('tela').innerHTML = res
+        while (numeros.length > 0){
+            numeros.pop()
+        }
         
+        numeros.push(res)
     }
-
-
 
     // limpa o array de numeros e o campo de display
     function limpar(){
